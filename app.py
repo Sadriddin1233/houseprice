@@ -19,5 +19,5 @@ if st.button("Narxni bashorat qilish"):
         'Hammomlar soni': [bedrooms],
         'Lot olchami': [bathrooms]
     })
-    prediction = model.predict(input_data)
-    st.success(f"Bashorat qilingan narx: ${prediction[0]:,.2f}")
+    prediction = model.predict(input_data)[0]
+    st.success(f"Bashorat qilingan narx: {prediction:,.2f} $")
